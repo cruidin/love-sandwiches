@@ -76,6 +76,14 @@ def update_surplus_worksheet(data):
     print("Surplus worksheet updated successfully.\n")
 
 
+def update_worksheet(data, worksheet):
+    """
+    """
+    print(f"Updating {worksheet} worksheet...\n")
+    worksheet_to_update = SHEET.worksheet(worksheet)
+    worksheet_to_update.append_row(data)
+    print(f"{worksheet} updated successfully.\n")
+
 def calculate_surplus_data(sales_row):
     """
     Compare sales with stock and calculate the surplus for each item type.
